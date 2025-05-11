@@ -2262,6 +2262,20 @@ libraries:
         method: nightlybranch
         name: v2
       type: github
+    root:
+      build_type: cmake
+      check_file: CMakeLists.txt
+      extra_cmake_arg:
+      - -Dminimal=ON
+      - -Dgnuinstall=ON
+      - -Drpath=ON
+      lib_type: shared
+      method: clone_branch
+      repo: root-project/root
+      target_prefix: v
+      targets:
+      - 6.34.08
+      type: github
     scnlib:
       build_type: cmake
       extra_cmake_arg:
